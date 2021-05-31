@@ -153,15 +153,29 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class='question' id='Q4'>
 
-      <h4>문제04.(문제내용)</h4>
+      <h4>문제04.job_history 테이블에서 근속근무 기간을 연단위로 환산하여 근속연수로 별칭을 지어준 후 사원ID(employee_id), 직무ID(job_id), 근속연수를 조회하되, 근속연수를 기준으로 내림차순으로 정렬하라.
+ (단, 근속연수는 소숫점 이하 두번째자리까지 출력)</h4>
       
       <details>
             <summary>해설</summary>
             <strong>
-                  (해답내용)
+                  select employee_id, job_id, round(((end_date - start_date)/365), 2) as 근속연수 from job_history order by 근속연수 desc;
             </strong>
             
-            (실행결과)
+            EMPLOYEE_ID JOB_ID                 근속연수
+            ----------- -------------------- ----------
+                    200 AD_ASST                    5.75
+                    102 IT_PROG                    5.53
+                    200 AC_ACCOUNT                  4.5
+                    101 AC_ACCOUNT                  4.1
+                    201 MK_REP                     3.84
+                    101 AC_MGR                     3.38
+                    114 ST_CLERK                   1.77
+                    176 SA_MAN                        1
+                    122 ST_CLERK                      1
+                    176 SA_REP                      .77
+
+            10 rows selected.
             
       </details>
 
