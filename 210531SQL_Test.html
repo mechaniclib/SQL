@@ -17,15 +17,72 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q1'>
 
-      <h4>문제01.(문제내용)</h4>
+      <h4>문제01.06년도 이후에 입사한 사원목록</h4>
       
       <details>
             <summary>해설</summary>
             <strong>
-                  (해답내용)
+                  SELECT FIRST_NAME, HIRE_DATE FROM EMPLOYEES WHERE HIRE_DATE >= '06/01/01';
             </strong>
             
-            (실행결과)
+                              FIRST_NAME                               HIRE_DAT
+                  ---------------------------------------- --------
+                  Alexander                                06/01/03
+                  Bruce                                    07/05/21
+                  Valli                                    06/02/05
+                  Diana                                    07/02/07
+                  Jose Manuel                              06/03/07
+                  Luis                                     07/12/07
+                  Guy                                      06/11/15
+                  Karen                                    07/08/10
+                  Kevin                                    07/11/16
+                  Irene                                    06/09/28
+                  James                                    07/01/14
+                  Steven                                   08/03/08
+                  TJ                                       07/04/10
+                  Michael                                  06/08/26
+                  Ki                                       07/12/12
+                  Hazel                                    08/02/06
+                  John                                     06/02/12
+                  Joshua                                   06/04/06
+                  Randall                                  06/03/15
+                  Peter                                    06/07/09
+                  Gerald                                   07/10/15
+                  Eleni                                    08/01/29
+                  Christopher                              06/03/30
+                  Nanette                                  06/12/09
+                  Oliver                                   07/11/23
+                  Sarath                                   06/11/03
+                  Danielle                                 07/03/19
+                  Mattea                                   08/01/24
+                  David                                    08/02/23
+                  Sundar                                   08/03/24
+                  Amit                                     08/04/21
+                  Harrison                                 06/03/23
+                  Tayler                                   06/01/24
+                  William                                  07/02/23
+                  Elizabeth                                07/03/24
+                  Sundita                                  08/04/21
+                  Jonathon                                 06/03/24
+                  Jack                                     06/04/23
+                  Kimberely                                07/05/24
+                  Charles                                  08/01/04
+                  Winston                                  06/01/24
+                  Jean                                     06/02/23
+                  Martha                                   07/06/21
+                  Girard                                   08/02/03
+                  Julia                                    06/06/24
+                  Anthony                                  07/02/07
+                  Timothy                                  06/07/11
+                  Randall                                  07/12/19
+                  Samuel                                   06/07/01
+                  Vance                                    07/03/17
+                  Alana                                    06/04/24
+                  Kevin                                    06/05/23
+                  Donald                                   07/06/21
+                  Douglas                                  08/01/13
+
+                  54 rows selected.
             
       </details>
 
@@ -34,15 +91,21 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class='question' id='Q2'>
 
-      <h4>문제02.(문제내용)</h4>
+      <h4>문제02.직업이 PROGRAMMER인 직원의 이메일출력</h4>
       
       <details>
             <summary>해설</summary>
             <strong>
-                  (해답내용)
+                  SELECT FIRST_NAME, EMAIL, JOB_ID FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG';
             </strong>
             
-            (실행결과)
+                        FIRST_NAME                               EMAIL                                              JOB_ID
+            ---------------------------------------- -------------------------------------------------- --------------------
+            Alexander                                AHUNOLD                                            IT_PROG
+            Bruce                                    BERNST                                             IT_PROG
+            David                                    DAUSTIN                                            IT_PROG
+            Valli                                    VPATABAL                                           IT_PROG
+            Diana                                    DLORENTZ                                           IT_PROG
             
       </details>
 
