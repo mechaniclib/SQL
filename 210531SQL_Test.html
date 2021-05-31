@@ -170,15 +170,64 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q5'>
 
-      <h4>문제05.(문제내용)</h4>
+      <h4>문제05.전화번호(phone_number)의 앞자리가 650인 사람의 First_name(이름)과 last_name(성)을 출력하시오.</h4>
       
       <details>
-            <summary>해설</summary>
+            <summary>select First_name, Last_name, Phone_number, where substr</summary>
             <strong>
-                  (해답내용)
+                  select First_name, Last_name, Phone_number
+from EMPLOYEES
+where substr(phone_number, 0, 2) = '650';
             </strong>
             
-            (실행결과)
+          
+FIRST_NAME                               LAST_NAME                                          PHONE_NUMBER
+---------------------------------------- -------------------------------------------------- ----------------------------------------
+Matthew                                  Weiss                                              650.123.1234
+Adam                                     Fripp                                              650.123.2234
+Payam                                    Kaufling                                           650.123.3234
+Shanta                                   Vollman                                            650.123.4234
+Kevin                                    Mourgos                                            650.123.5234
+Julia                                    Nayer                                              650.124.1214
+Irene                                    Mikkilineni                                        650.124.1224
+James                                    Landry                                             650.124.1334
+Steven                                   Markle                                             650.124.1434
+Laura                                    Bissot                                             650.124.5234
+Mozhe                                    Atkinson                                           650.124.6234
+James                                    Marlow                                             650.124.7234
+TJ                                       Olson                                              650.124.8234
+Jason                                    Mallin                                             650.127.1934
+Michael                                  Rogers                                             650.127.1834
+Ki                                       Gee                                                650.127.1734
+Hazel                                    Philtanker                                         650.127.1634
+Renske                                   Ladwig                                             650.121.1234
+Stephen                                  Stiles                                             650.121.2034
+John                                     Seo                                                650.121.2019
+Joshua                                   Patel                                              650.121.1834
+Trenna                                   Rajs                                               650.121.8009
+Curtis                                   Davies                                             650.121.2994
+Randall                                  Matos                                              650.121.2874
+Peter                                    Vargas                                             650.121.2004
+Winston                                  Taylor                                             650.507.9876
+Jean                                     Fleaur                                             650.507.9877
+Martha                                   Sullivan                                           650.507.9878
+Girard                                   Geoni                                              650.507.9879
+Nandita                                  Sarchand                                           650.509.1876
+Alexis                                   Bull                                               650.509.2876
+Julia                                    Dellinger                                          650.509.3876
+Anthony                                  Cabrio                                             650.509.4876
+Kelly                                    Chung                                              650.505.1876
+Jennifer                                 Dilly                                              650.505.2876
+Timothy                                  Gates                                              650.505.3876
+Randall                                  Perkins                                            650.505.4876
+Sarah                                    Bell                                               650.501.1876
+Britney                                  Everett                                            650.501.2876
+Samuel                                   McCain                                             650.501.3876
+Vance                                    Jones                                              650.501.4876
+Alana                                    Walsh                                              650.507.9811
+Kevin                                    Feeney                                             650.507.9822
+Donald                                   OConnell                                           650.507.9833
+Douglas                                  Grant                                              650.507.9844
             
       </details>
 
