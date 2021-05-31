@@ -114,15 +114,37 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q3'>
 
-      <h4>문제03.(문제내용)</h4>
+      <h4>문제03.job 테이블에서 최소연봉과 최대 연봉이 제일 많이 차이 나는 직무를 내림차순으로 정렬하라 (단, 금액은 $999,99와 같이 표기한다)</h4>
       
       <details>
             <summary>해설</summary>
             <strong>
-                  (해답내용)
+                  select job_title, to_char(max_salary-min_salary, '$9999,99')  as 연봉차액 from jobs order by 연봉차액 desc;
             </strong>
             
-            (실행결과)
+            JOB_TITLE                                                              연봉차액
+            ---------------------------------------------------------------------- ------------------
+            President                                                                $199,20
+            Administration Vice President                                            $150,00
+            Sales Manager                                                            $100,80
+            Finance Manager                                                           $78,00
+            Accounting Manager                                                        $78,00
+            Purchasing Manager                                                        $70,00
+            Sales Representative                                                      $60,08
+            Marketing Manager                                                         $60,00
+            Programmer                                                                $60,00
+            Public Relations Representative                                           $60,00
+            Marketing Representative                                                  $50,00
+            Human Resources Representative                                            $50,00
+            Public Accountant                                                         $48,00
+            Accountant                                                                $48,00
+            Shipping Clerk                                                            $30,00
+            Purchasing Clerk                                                          $30,00
+            Administration Assistant                                                  $30,00
+            Stock Manager                                                             $30,00
+            Stock Clerk                                                               $29,92
+
+            19 rows selected.
             
       </details>
 
