@@ -14,174 +14,107 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <h1>[SQL 문답]</h1>
 
+      
 <div class='question' id='Q1'>
 
-      <h4>1. 사원번호(employee_id)가 130 초과 140 미만인 사람의 이름(first_name)과 이메일(email)을 출력하시오</h4>
+      <h4>문제01.(문제내용)</h4>
       
       <details>
-            <summary>Answer</summary>
-            <strong>select</strong> first_name, email
-            <strong>from</strong> employees
-            <strong>where</strong> employee_id <strong>between</strong> 131 <strong>and</strong> 139;
-
-            FIRST_NAME                               EMAIL
-            ---------------------------------------- --------------------------------------------------
-            James                                    JAMRLOW
-            TJ                                       TJOLSON
-            Jason                                    JMALLIN
-            Michael                                  MROGERS
-            Ki                                       KGEE
-            Hazel                                    HPHILTAN
-            Renske                                   RLADWIG
-            Stephen                                  SSTILES
-            John                                     JSEO
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
       </details>
 
 </div>
 
 
-<div class=question id=Q2>
-<h4>2. 이름(first_name)의 길이가 3에서 5 사이고 (비교연산자 사용), 이름 2번째 자리에 a가 들어가고(like 사용), 이름에 e가 포함된 전화번호(phone_number)와 고용일(hire_date)을 출력하시오</h4>
-<details><summary>모범 답안</summary>
-<strong>select</strong> phone_number, hire_date
-<strong>from</strong> employees
-<strong>where</strong> length(first_name) >= 3 <strong>and</strong> length(first_name) <= 5
-<strong>and</strong> first_name <strong>like</strong> '_a%' <strong>and</strong> first_name <strong>like</strong> '%e%';
+<div class='question' id='Q2'>
 
-PHONE_NUMBER                             HIRE_DAT
----------------------------------------- --------
-515.127.4566                             07/08/10
-650.124.1334                             07/01/14
-650.124.7234                             05/02/16
-650.127.1634                             08/02/06
-011.44.1344.467268                       05/01/05
-650.501.4876                             07/03/17
-</details>
+      <h4>문제02.(문제내용)</h4>
+      
+      <details>
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
+      </details>
+
 </div>
-<div class=question id=Q3>
-<h4>3. 전화번호(phone_number)의 중간자리가 124인 사람의 직무ID(job_id)와 성(last_name)을 직무ID의 오름차순을 기준으로 출력하시오</h4>
-<details><summary>모범 답안</summary>
-<strong>select</strong> job_id, last_name
-<strong>from</strong> employees
-<strong>where</strong> substr(phone_number, 5, 3) = '124'
-<strong>order by</strong> job_id asc;
 
-JOB_ID               LAST_NAME
--------------------- --------------------------------------------------
-FI_ACCOUNT           Popp
-FI_ACCOUNT           Urman
-FI_ACCOUNT           Sciarra
-FI_ACCOUNT           Chen
-FI_ACCOUNT           Faviet
-FI_MGR               Greenberg
-ST_CLERK             Marlow
-ST_CLERK             Atkinson
-ST_CLERK             Bissot
-ST_CLERK             Markle
-ST_CLERK             Landry
-ST_CLERK             Mikkilineni
-ST_CLERK             Olson
-ST_CLERK             Nayer
-</details>
+      
+<div class='question' id='Q3'>
+
+      <h4>문제03.(문제내용)</h4>
+      
+      <details>
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
+      </details>
+
 </div>
-<div class=question id=Q4>
-<h4>4. 상사ID(manager_id)를 9로 나누었을 때 나머지가 1인 사람의 급여(salary)와 부서ID(department_ID))를 급여가 큰 순으로 출력하시오</h4>
-<details><summary>모범 답안</summary>
-<strong>select</strong> salary, department_ID
-<strong>from</strong> employees
-<strong>where</strong> mod(manager_id, 9) = 1
-<strong>order by</strong> salary <strong>desc</strong>;
 
-SALARY      DEPARTMENT_ID
-----------&nbsp;&nbsp;&nbsp;&nbsp;-------------
-     17000            90
-     17000            90
-     14000            80
-     13500            80
-     13000            20
-     12000            80
-     11000            80
-     11000            30
-     10500            80
-     10000            80
-      9500            80
-      9000            80
-      8200            50
-      8000            80
-      8000            50
-      7900            50
-      7500            80
-      7000            80
-      6500            50
-      5800            50
-</details>
+
+<div class='question' id='Q4'>
+
+      <h4>문제04.(문제내용)</h4>
+      
+      <details>
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
+      </details>
+
 </div>
-<div class=question id=Q5>
-<h4>5. 급여(salary)를 천의 자리에서 반올림했을 때 10000이 되는 사람의 이름(first_name), 성(last_name), 전화번호(phone_number)를 출력하시오</h4>
-<details><summary>모범 답안</summary>
-<strong>select</strong> first_name, last_name, phone_number
-<strong>from</strong> employees
-<strong>where</strong> round(salary, -4) = 10000;
 
-FIRST_NAME                               LAST_NAME                                          PHONE_NUMBER
----------------------------------------- -------------------------------------------------- ----------------------------------------
-Alexander                                Hunold                                             590.423.4567
-Bruce                                    Ernst                                              590.423.4568
-Nancy                                    Greenberg                                          515.124.4569
-Daniel                                   Faviet                                             515.124.4169
-John                                     Chen                                               515.124.4269
-Ismael                                   Sciarra                                            515.124.4369
-Jose Manuel                              Urman                                              515.124.4469
-Luis                                     Popp                                               515.124.4567
-Den                                      Raphaely                                           515.127.4561
-Matthew                                  Weiss                                              650.123.1234
-Adam                                     Fripp                                              650.123.2234
-Payam                                    Kaufling                                           650.123.3234
-Shanta                                   Vollman                                            650.123.4234
-Kevin                                    Mourgos                                            650.123.5234
-John                                     Russell                                            011.44.1344.429268
-Karen                                    Partners                                           011.44.1344.467268
-Alberto                                  Errazuriz                                          011.44.1344.429278
-Gerald                                   Cambrault                                          011.44.1344.619268
-Eleni                                    Zlotkey                                            011.44.1344.429018
-Peter                                    Tucker                                             011.44.1344.129268
-David                                    Bernstein                                          011.44.1344.345268
-Peter                                    Hall                                               011.44.1344.478968
-Christopher                              Olsen                                              011.44.1344.498718
-Nanette                                  Cambrault                                          011.44.1344.987668
-Oliver                                   Tuvault                                            011.44.1344.486508
-Janette                                  King                                               011.44.1345.429268
-Patrick                                  Sully                                              011.44.1345.929268
-Allan                                    McEwen                                             011.44.1345.829268
-Lindsey                                  Smith                                              011.44.1345.729268
-Louise                                   Doran                                              011.44.1345.629268
-Sarath                                   Sewall                                             011.44.1345.529268
-Clara                                    Vishney                                            011.44.1346.129268
-Danielle                                 Greene                                             011.44.1346.229268
-Mattea                                   Marvins                                            011.44.1346.329268
-David                                    Lee                                                011.44.1346.529268
-Sundar                                   Ande                                               011.44.1346.629268
-Amit                                     Banda                                              011.44.1346.729268
-Lisa                                     Ozer                                               011.44.1343.929268
-Harrison                                 Bloom                                              011.44.1343.829268
-Tayler                                   Fox                                                011.44.1343.729268
-William                                  Smith                                              011.44.1343.629268
-Elizabeth                                Bates                                              011.44.1343.529268
-Sundita                                  Kumar                                              011.44.1343.329268
-Ellen                                    Abel                                               011.44.1644.429267
-Alyssa                                   Hutton                                             011.44.1644.429266
-Jonathon                                 Taylor                                             011.44.1644.429265
-Jack                                     Livingston                                         011.44.1644.429264
-Kimberely                                Grant                                              011.44.1644.429263
-Charles                                  Johnson                                            011.44.1644.429262
-Michael                                  Hartstein                                          515.123.5555
-Pat                                      Fay                                                603.123.6666
-Susan                                    Mavris                                             515.123.7777
-Hermann                                  Baer                                               515.123.8888
-Shelley                                  Higgins                                            515.123.8080
-William                                  Gietz                                              515.123.8181                                     515.123.8888
+      
+<div class='question' id='Q5'>
 
-</details>
+      <h4>문제05.(문제내용)</h4>
+      
+      <details>
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
+      </details>
+
 </div>
+
+      
+<div class='question' id='Q6'>
+
+      <h4>문제06.(문제내용)</h4>
+      
+      <details>
+            <summary>해설</summary>
+            <strong>
+                  (해답내용)
+            </strong>
+            
+            (실행결과)
+            
+      </details>
+
+</div>
+
 </body>
 </html>
