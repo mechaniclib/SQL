@@ -248,15 +248,27 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q6'>
 
-      <h4>문제06.(문제내용)</h4>
+      <h4>문제06.ID(DEPARTMENT_ID)가 10의 자리에서 반올림 하였을때 100이 되는 사람들의 이름(first_name)과
+핸드폰번호(phone_number) 중 이름을 오름차순으로 출력하시오</h4>
       
       <details>
-            <summary>해설</summary>
+            <summary>select first_name, DEPARTMENT_ID, phone_number, order by, round</summary>
             <strong>
-                  (해답내용)
+select first_name, DEPARTMENT_ID, phone_number
+from employees
+where round(DEPARTMENT_ID, -1) = 100
+order by First_name asc;
             </strong>
             
-            (실행결과)
+            FIRST_NAME                               DEPARTMENT_ID PHONE_NUMBER
+---------------------------------------- ------------- ----------------------------------------
+Daniel                                             100 515.124.4169
+Ismael                                             100 515.124.4369
+John                                               100 515.124.4269
+Jose Manuel                                        100 515.124.4469
+Luis                                               100 515.124.4567
+Nancy                                              100 515.124.4569
+
             
       </details>
 
