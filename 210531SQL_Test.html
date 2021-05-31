@@ -12,12 +12,12 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <body>
 
-<h1>[SQL 문답]</h1>
+<h1>[SQL 문답] : 김영민, 김수연 이진영</h1>
 
       
 <div class='question' id='Q1'>
 
-      <h4>문제01.06년도 이후에 입사한 사원목록</h4>
+      <h4>문제01.06년도 이후에 입사한 사원목록을 출력하세요</h4>
       
       <details>
             <summary>해설</summary>
@@ -91,7 +91,7 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class='question' id='Q2'>
 
-      <h4>문제02.직업이 PROGRAMMER인 직원의 이메일출력</h4>
+      <h4>문제02.직업이 PROGRAMMER인 직원의 이메일목록을 출력하세요</h4>
       
       <details>
             <summary>해설</summary>
@@ -114,7 +114,7 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q3'>
 
-      <h4>문제03.job 테이블에서 최소연봉과 최대 연봉이 제일 많이 차이 나는 직무를 내림차순으로 정렬하라 (단, 금액은 $999,99와 같이 표기한다)</h4>
+      <h4>문제03.job 테이블에서 최소연봉과 최대 연봉이 제일 많이 차이 나는 직무를 내림차순으로 정렬 (단, 금액은 $999,99와 같이 표기한다)</h4>
       
       <details>
             <summary>해설</summary>
@@ -153,8 +153,9 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class='question' id='Q4'>
 
-      <h4>문제04.job_history 테이블에서 근속근무 기간을 연단위로 환산하여 근속연수로 별칭을 지어준 후 사원ID(employee_id), 직무ID(job_id), 근속연수를 조회하되, 근속연수를 기준으로 내림차순으로 정렬하라.
- (단, 근속연수는 소숫점 이하 두번째자리까지 출력)</h4>
+      <h4>문제04.job_history 테이블에서 근속근무 기간을 연단위로 환산하여 근속연수로 별칭을 지어준 후
+            사원ID(employee_id), 직무ID(job_id), 근속연수를 조회하되, 근속연수를 기준으로 내림차순으로 정렬하세요.
+             (단, 근속연수는 소숫점 이하 두번째자리까지 출력)</h4>
       
       <details>
             <summary>해설</summary>
@@ -184,10 +185,10 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q5'>
 
-      <h4>문제05.전화번호(phone_number)의 앞자리가 650인 사람의 First_name(이름)과 last_name(성)을 출력하시오.</h4>
+      <h4>문제05.전화번호(phone_number)의 앞자리가 650인 사람의 First_name(이름)과 last_name(성)을 출력하세요</h4>
       
       <details>
-            <summary>select First_name, Last_name, Phone_number, where substr</summary>
+            <summary>해설</summary>
             <strong>
                   select First_name, Last_name, Phone_number from EMPLOYEES where substr(phone_number, 0, 2) = '650';
             </strong>
@@ -248,26 +249,22 @@ details {padding : 1rem; white-space: pre-wrap;}
       
 <div class='question' id='Q6'>
 
-      <h4>문제06.ID(DEPARTMENT_ID)가 10의 자리에서 반올림 하였을때 100이 되는 사람들의 이름(first_name)과
-핸드폰번호(phone_number) 중 이름을 오름차순으로 출력하시오</h4>
+      <h4>문제06.ID(DEPARTMENT_ID)가 10의 자리에서 반올림 하였을때 100이 되는 사람들의 이름(first_name)과 핸드폰번호(phone_number) 중 이름을 오름차순으로 출력하세요</h4>
       
       <details>
             <summary>select first_name, DEPARTMENT_ID, phone_number, order by, round</summary>
             <strong>
-select first_name, DEPARTMENT_ID, phone_number
-from employees
-where round(DEPARTMENT_ID, -1) = 100
-order by First_name asc;
+                  select first_name, DEPARTMENT_ID, phone_number from employees where round(DEPARTMENT_ID, -1) = 100 order by First_name asc;
             </strong>
             
-            FIRST_NAME                               DEPARTMENT_ID PHONE_NUMBER
----------------------------------------- ------------- ----------------------------------------
-Daniel                                             100 515.124.4169
-Ismael                                             100 515.124.4369
-John                                               100 515.124.4269
-Jose Manuel                                        100 515.124.4469
-Luis                                               100 515.124.4567
-Nancy                                              100 515.124.4569
+                              FIRST_NAME                               DEPARTMENT_ID PHONE_NUMBER
+                  ---------------------------------------- ------------- ----------------------------------------
+                  Daniel                                             100 515.124.4169
+                  Ismael                                             100 515.124.4369
+                  John                                               100 515.124.4269
+                  Jose Manuel                                        100 515.124.4469
+                  Luis                                               100 515.124.4567
+                  Nancy                                              100 515.124.4569
 
             
       </details>
