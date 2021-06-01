@@ -126,7 +126,7 @@ Kimberely                                07/05/24
 107 rows selected.
 */
 
--- Q2.세일즈부서의 직원들의 전화번호 목록 겁색하세요
+-- Q2.세일즈부서(department)의 직원(employees)들의 전화번호 목록을 검색하세요
 --solutions
 select emp.first_name, emp.phone_number, dp.department_name
 from employees emp, departments dp
