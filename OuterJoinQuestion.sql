@@ -1,10 +1,11 @@
--- Q.직원들의 이름(first_name), 입사일, 부서명(department_name) 검색하기
+-- Q1.직원들의 이름(first_name), 입사일, 부서명(department_name) 검색하세요
 -- 단, 부서가 없는 직원이 있다면 그 직원 정보도 검색에 포함시키기
 -- user hr/hr table
+
+--solutions
 select first_name, hire_date, departments.department_name
 from employees, departments
 where employees.department_id = departments.department_id(+);
-
 
 --results
 /*
@@ -123,4 +124,56 @@ Shelley                                  02/06/07 Accounting
 Kimberely                                07/05/24
 
 107 rows selected.
+*/
+
+-- Q2.세일즈부서의 직원들의 전화번호 목록 겁색하세요
+--solutions
+select emp.first_name, emp.phone_number, dp.department_name
+from employees emp, departments dp
+where dp.department_name = 'Sales' and emp.department_id = dp.department_id(+);
+
+--results
+/*
+SQL> select emp.first_name, emp.phone_number, dp.department_name
+  2  from employees emp, departments dp
+  3  where dp.department_name = 'Sales' and emp.department_id = dp.department_id(+);
+
+FIRST_NAME                               PHONE_NUMBER                             DEPARTMENT_NAME
+---------------------------------------- ---------------------------------------- ------------------------------------------------------------
+John                                     011.44.1344.429268                       Sales
+Karen                                    011.44.1344.467268                       Sales
+Alberto                                  011.44.1344.429278                       Sales
+Gerald                                   011.44.1344.619268                       Sales
+Eleni                                    011.44.1344.429018                       Sales
+Peter                                    011.44.1344.129268                       Sales
+David                                    011.44.1344.345268                       Sales
+Peter                                    011.44.1344.478968                       Sales
+Christopher                              011.44.1344.498718                       Sales
+Nanette                                  011.44.1344.987668                       Sales
+Oliver                                   011.44.1344.486508                       Sales
+Janette                                  011.44.1345.429268                       Sales
+Patrick                                  011.44.1345.929268                       Sales
+Allan                                    011.44.1345.829268                       Sales
+Lindsey                                  011.44.1345.729268                       Sales
+Louise                                   011.44.1345.629268                       Sales
+Sarath                                   011.44.1345.529268                       Sales
+Clara                                    011.44.1346.129268                       Sales
+Danielle                                 011.44.1346.229268                       Sales
+Mattea                                   011.44.1346.329268                       Sales
+David                                    011.44.1346.529268                       Sales
+Sundar                                   011.44.1346.629268                       Sales
+Amit                                     011.44.1346.729268                       Sales
+Lisa                                     011.44.1343.929268                       Sales
+Harrison                                 011.44.1343.829268                       Sales
+Tayler                                   011.44.1343.729268                       Sales
+William                                  011.44.1343.629268                       Sales
+Elizabeth                                011.44.1343.529268                       Sales
+Sundita                                  011.44.1343.329268                       Sales
+Ellen                                    011.44.1644.429267                       Sales
+Alyssa                                   011.44.1644.429266                       Sales
+Jonathon                                 011.44.1644.429265                       Sales
+Jack                                     011.44.1644.429264                       Sales
+Charles                                  011.44.1644.429262                       Sales
+
+34 rows selected.
 */
