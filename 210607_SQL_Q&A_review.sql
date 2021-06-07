@@ -161,7 +161,7 @@ DEPTNO   MIN(SAL)
 
 DROP TABLE shoes_customer;
 DROP TABLE shoes_type;
-DROP TABLE shoes_colOR;
+DROP TABLE shoes_color;
 DROP TABLE shoes_size;
 DROP TABLE shoes_product;
 
@@ -198,8 +198,8 @@ CREATE TABLE shoes_product(
 INSERT INTO shoes_customer VALUES(0001, 'Alex', 'sneakers', 'blue', 255, 'NIKE');
 INSERT INTO shoes_customer VALUES(0002, 'Alice', 'flat_shoe', 'green', 240, 'Crocs');
 INSERT INTO shoes_customer VALUES(0003, 'Edward', 'high_hill', 'red' , 235, 'Clarks');
-INSERT INTO shoes_customer VALUES(0004, 'Smith', 'canvAS', 'white', 275, 'ADIDAS');
-INSERT INTO shoes_customer VALUES(0005, 'Robert', 'wORking', 'black', 290, 'FILA');
+INSERT INTO shoes_customer VALUES(0004, 'Smith', 'canvas', 'white', 275, 'ADIDAS');
+INSERT INTO shoes_customer VALUES(0005, 'Robert', 'working', 'black', 290, 'FILA');
 
 INSERT INTO shoes_type VALUES('sneakers');
 INSERT INTO shoes_type VALUES('sandal');
@@ -207,16 +207,16 @@ INSERT INTO shoes_type VALUES('flat_shoe');
 INSERT INTO shoes_type VALUES('high_hill');
 INSERT INTO shoes_type VALUES('canvAS');
 INSERT INTO shoes_type VALUES('dress_shoes');
-INSERT INTO shoes_type VALUES('wORking');
+INSERT INTO shoes_type VALUES('working');
 
-INSERT INTO shoes_colOR VALUES('black');
-INSERT INTO shoes_colOR VALUES('white');
-INSERT INTO shoes_colOR VALUES('gray');
-INSERT INTO shoes_colOR VALUES('red');
-INSERT INTO shoes_colOR VALUES('blue');
-INSERT INTO shoes_colOR VALUES('green');
-INSERT INTO shoes_colOR VALUES('yellow');
-INSERT INTO shoes_colOR VALUES('purple');
+INSERT INTO shoes_color VALUES('black');
+INSERT INTO shoes_color VALUES('white');
+INSERT INTO shoes_color VALUES('gray');
+INSERT INTO shoes_color VALUES('red');
+INSERT INTO shoes_color VALUES('blue');
+INSERT INTO shoes_color VALUES('green');
+INSERT INTO shoes_color VALUES('yellow');
+INSERT INTO shoes_color VALUES('purple');
 
 INSERT INTO shoes_size VALUES(220);
 INSERT INTO shoes_size VALUES(225);
@@ -238,14 +238,14 @@ INSERT INTO shoes_size VALUES(300);
 INSERT INTO shoes_product VALUES(9001, 'KNY92T', 'sneakers', 'blue', 255, 'NIKE');
 INSERT INTO shoes_product VALUES(9002, 'TYZ54R', 'flat_shoes', 'green', 240, 'Crocs');
 INSERT INTO shoes_product VALUES(9003, 'MMZ843', 'high_hills', 'red' , 235, 'Clarks');
-INSERT INTO shoes_product VALUES(9004, 'MTR086', 'canvAS', 'white', 275, 'ADIDAS');
-INSERT INTO shoes_product VALUES(9005, 'NYE904', 'wORkers', 'black', 290, 'FILA');
+INSERT INTO shoes_product VALUES(9004, 'MTR086', 'canvas', 'white', 275, 'ADIDAS');
+INSERT INTO shoes_product VALUES(9005, 'NYE904', 'working', 'black', 290, 'FILA');
 INSERT INTO shoes_product VALUES(9006, 'MYM459', 'sandal', 'white', 260, 'Crocs');
 
 COMMIT;
 
 SELECT * FROM shoes_customer;
 SELECT * FROM shoes_type;
-SELECT * FROM shoes_colOR;
+SELECT * FROM shoes_color;
 SELECT * FROM shoes_size;
 SELECT * FROM shoes_product;
