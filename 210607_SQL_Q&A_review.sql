@@ -179,7 +179,7 @@ CREATE TABLE shoes_type(
 );
 
 CREATE TABLE shoes_color(
-  colOR varchar2(10)
+  color varchar2(10)
 );
 
 CREATE TABLE shoes_size(
