@@ -169,7 +169,7 @@ CREATE TABLE shoes_customer(
   cs_number number(5),
   cs_name varchar2(10),
   cs_type varchar2(10),
-  cs_colOR varchar2(10),
+  cs_color varchar2(10),
   cs_size number(5),
   cs_brand varchar2(10)
 );
@@ -178,7 +178,7 @@ CREATE TABLE shoes_type(
   shoes_type varchar2(10)
 );
 
-CREATE TABLE shoes_colOR(
+CREATE TABLE shoes_color(
   colOR varchar2(10)
 );
 
@@ -190,7 +190,7 @@ CREATE TABLE shoes_product(
   product_number number(5),
   product_name varchar2(10),
   shoes_type varchar2(10),
-  colOR varchar2(10),
+  color varchar2(10),
   shoes_size number(5),
   brand_name varchar2(10)
 );
@@ -205,7 +205,7 @@ INSERT INTO shoes_type VALUES('sneakers');
 INSERT INTO shoes_type VALUES('sandal');
 INSERT INTO shoes_type VALUES('flat_shoe');
 INSERT INTO shoes_type VALUES('high_hill');
-INSERT INTO shoes_type VALUES('canvAS');
+INSERT INTO shoes_type VALUES('canvas');
 INSERT INTO shoes_type VALUES('dress_shoes');
 INSERT INTO shoes_type VALUES('working');
 
